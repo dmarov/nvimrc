@@ -25,6 +25,8 @@ set smarttab
 set expandtab
 set smartindent
 
+set scrolloff=10
+
 " plug
 
 call plug#begin('~/.vim/plugged')
