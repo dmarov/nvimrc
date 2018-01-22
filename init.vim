@@ -28,7 +28,7 @@ set scrolloff=10
 
 " plug
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
