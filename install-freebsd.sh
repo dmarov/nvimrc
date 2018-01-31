@@ -29,4 +29,6 @@ cd ~
 nvim -c PlugUpgrade -c PlugInstall -c PlugUpdate -c q -c q
 nvim -c UpdateRemotePlugins -c q -c q
 
+cp -r ~/.vim/plugged ~/.config/nvim
+
 echo done!
