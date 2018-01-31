@@ -93,7 +93,8 @@ let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeShowHidden=1
-
+let NERDTreeMapUpdir = 'h'
+let NERDTreeMapChangeRoot = 'l'
 " /nerdtree
 
 " nerdtree-tabs
