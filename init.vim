@@ -216,3 +216,9 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
 " /vim-test
+" quick fix CtrlSF mode
+let g:ctrlsf_default_view_mode = 'compact'
+let g:ctrlsf_position = 'bottom'
+let g:ctrlsf_regex_pattern = 1
+let g:ctrlsf_selected_line_hl = 'op'
+let g:ctrlsf_winsize = '100%'
