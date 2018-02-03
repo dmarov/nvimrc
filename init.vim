@@ -231,3 +231,5 @@ let g:ctrlsf_winsize = '100%'
 for i in range(1, 9)
     execute "nmap \<A-".i."> ".i."gt"
 endfor
+
+:nmap <Space> :NERDTreeTabsToggle<CR>
