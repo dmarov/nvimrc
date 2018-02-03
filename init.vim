@@ -224,4 +224,10 @@ let g:ctrlsf_selected_line_hl = 'op'
 let g:ctrlsf_winsize = '100%'
 
 :nmap echo a<?= $; ?><Esc>2ba
-:nmap code a<?php  ?><Esc>1ba
+:nmap code a<?php  ?><Esc>1bhi
+:nmap <Tab> <C-w>w
+
+" switch tabs like in firefox
+for i in range(1, 9)
+    execute "nmap \<A-".i."> ".i."gt"
+endfor
