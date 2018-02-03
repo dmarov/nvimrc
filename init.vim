@@ -222,3 +222,6 @@ let g:ctrlsf_position = 'bottom'
 let g:ctrlsf_regex_pattern = 1
 let g:ctrlsf_selected_line_hl = 'op'
 let g:ctrlsf_winsize = '100%'
+
+:nmap echo a<?= $; ?><Esc>2ba
+:nmap code a<?php  ?><Esc>1ba
