@@ -228,8 +228,10 @@ let g:ctrlsf_winsize = '100%'
 :nmap <Tab> <C-w>w
 
 " switch tabs like in firefox
-for i in range(1, 9)
+for i in range(1, 8)
     execute "nmap \<A-".i."> ".i."gt"
 endfor
+
+:nmap <A-9> :tablast<CR>
 
 :nmap <Space> :NERDTreeTabsToggle<CR>
