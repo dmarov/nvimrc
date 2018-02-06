@@ -1,9 +1,24 @@
 #!/bin/sh 
 
 # requirements
-sudo pkg install -y curl git npm node xclip neovim coreutils \
-python3 py35-setuptools libexo liberation-fonts-ttf global \
-ctags rubygem-gems the_silver_searcher
+sudo pkg install -y \
+    curl \
+    git \
+    npm \
+    node \
+    xclip \
+    neovim \
+    coreutils \
+    python3 \
+    py35-setuptools \
+    libexo \
+    liberation-fonts-ttf \
+    global \
+    ctags \
+    rubygem-gems \
+    the_silver_searcher \
+    pecl-msgpack0 \
+    php56-pcntl
 
 sudo yarn global add postcss-cli autoprefixer
 sudo easy_install-3.5 pip
@@ -13,11 +28,9 @@ sudo gem install neovim
 
 # create folders
 mkdir -p ~/.config/nvim/colors
-mkdir -p ~/.config/nvim/plugged
-mkdir -p ~/.config/nvim/autoload
 
 # install plug
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # install config

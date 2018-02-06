@@ -27,7 +27,7 @@ set smartindent
 set scrolloff=10
 
 " plug
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -50,7 +50,6 @@ Plug 'Ioannis-Kapoulas/vim-autoprefixer'
 Plug 'sheerun/vim-polyglot'
 Plug 'eugen0329/vim-esearch'
 Plug 'neomake/neomake'
-Plug 'maralla/completor.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'gregsexton/matchtag'
 Plug 'dyng/ctrlsf.vim'
@@ -60,13 +59,17 @@ Plug 'mhinz/vim-signify'
 Plug 'Yggdroot/indentLine'
 Plug 'KabbAmine/gulp-vim'
 Plug 'godlygeek/tabular'
-" Plug 'autozimu/LanguageClient-neovim', {'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/echodoc.vim'
 Plug 'Shougo/denite.nvim'
 Plug 'jsfaint/gen_tags.vim'
 Plug 'Rican7/php-doc-modded'
 Plug 'janko-m/vim-test'
 Plug 'joshdick/onedark.vim'
+
+Plug 'Shougo/vimproc.vim', {'do' : 'gmake'}
+Plug 'm2mdas/phpcomplete-extended'
+" Plug 'maralla/completor.vim'
+
 call plug#end()
 " /plug
 
@@ -125,13 +128,13 @@ let g:neomake_rust_enabled_makers = []
 " /neomake
 
 " deoplete
-let g:deoplete#enable_at_startup = 1
-function Multiple_cursors_before()
-    let g:deoplete#disable_auto_complete = 1
-endfunction
-function Multiple_cursors_after()
-    let g:deoplete#disable_auto_complete = 0
-endfunction
+" let g:deoplete#enable_at_startup = 1
+" function Multiple_cursors_before()
+"     let g:deoplete#disable_auto_complete = 1
+" endfunction
+" function Multiple_cursors_after()
+"     let g:deoplete#disable_auto_complete = 0
+" endfunction
 " /deoplete
 
 " settings for tpl files
