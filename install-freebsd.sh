@@ -3,7 +3,7 @@
 # requirements
 sudo pkg install -y curl git npm node xclip neovim coreutils \
 python3 py35-setuptools libexo liberation-fonts-ttf global \
-ctags the_silver_searcher
+ctags ruby23-gems the_silver_searcher
 
 sudo yarn global add postcss-cli autoprefixer
 sudo easy_install-3.5 pip
@@ -11,20 +11,14 @@ sudo pip install neovim
 sudo pip install neovim-remote
 sudo gem install neovim
 
-# create folders
-mkdir -p ~/.config/nvim/autoload
-mkdir -p ~/.config/nvim/colors
-mkdir -p ~/.config/nvim/plugged
-
-# onedark color scheme
-curl -fLo ~/.config/nvim/colors/onedark.vim \
-https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/onedark.vim
-curl -fLo ~/.config/nvim/autoload/onedark.vim \
-https://raw.githubusercontent.com/joshdick/onedark.vim/master/autoload/onedark.vim
-
 # install plug
-curl -fLo ~/.config/nvim/autoload/plug.vim \
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# create folders
+mkdir -p ~/.config
+mkdir -p ~/.config/nvim
+mkdir -p ~/.config/nvim/colors
 
 # install config
 ln -sf `pwd`/init.vim ~/.config/nvim/init.vim
