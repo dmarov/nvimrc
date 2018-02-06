@@ -17,8 +17,6 @@ sudo pkg install -y \
     ctags \
     rubygem-gems \
     the_silver_searcher \
-    pecl-msgpack0 \
-    php56-pcntl
 
 sudo yarn global add postcss-cli autoprefixer
 sudo easy_install-3.5 pip
