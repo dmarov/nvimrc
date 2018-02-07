@@ -65,6 +65,7 @@ Plug 'jsfaint/gen_tags.vim'
 Plug 'Rican7/php-doc-modded'
 Plug 'janko-m/vim-test'
 
+Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'gmake'}
 Plug 'm2mdas/phpcomplete-extended'
 " Plug 'maralla/completor.vim'
