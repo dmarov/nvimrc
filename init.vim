@@ -80,19 +80,14 @@ Plug 'jakwings/vim-colors'
 call plug#end()
 " /plug
 
-" colorscheme onedark
-" colorscheme duoduo
-" colorscheme northpole
-" colorscheme deus
 colorscheme moody
-
 
 " airline
 set laststatus=2
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='bubblegum'
+let g:airline_theme='raven'
 " /airline
 
 " nerdtree
