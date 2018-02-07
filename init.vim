@@ -1,4 +1,5 @@
 syntax on
+set termguicolors
 set hidden
 let g:rehash256 = 1
 set foldmethod=indent
@@ -84,11 +85,16 @@ colorscheme moody
 
 " airline
 set laststatus=2
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '◀'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='raven'
 " /airline
+
+" emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,tpl,css,scss EmmetInstall
+" /emmet
 
 " nerdtree
 let NERDTreeWinSize = 25
@@ -206,8 +212,9 @@ let g:ctrlsf_winsize = '100%'
 
 " custom mappings
 
-:nmap echo a<?= $; ?><Esc>2ba
-:nmap code a<?php  ?><Esc>1bhi
+:nmap <buffer> echo a<?= $; ?><Esc>2ba
+:nmap <buffer> code a<?php  ?><Esc>1bhi
+" autocmd FileType phptemplate nmap <buffer> echo a<?= $; ?><Esc>2ba
 :nmap <Tab> <C-w>w
 
 for i in range(1, 8)
@@ -218,3 +225,5 @@ endfor
 
 :nmap <Space> :NERDTreeTabsToggle<CR>
 " /custom mappings
+
+" autocmd FileType tpl phptemplate
