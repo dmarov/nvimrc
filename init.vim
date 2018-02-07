@@ -27,7 +27,7 @@ set smartindent
 set scrolloff=10
 
 " plug
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -64,16 +64,27 @@ Plug 'Shougo/denite.nvim'
 Plug 'jsfaint/gen_tags.vim'
 Plug 'Rican7/php-doc-modded'
 Plug 'janko-m/vim-test'
-Plug 'joshdick/onedark.vim'
 
 Plug 'Shougo/vimproc.vim', {'do' : 'gmake'}
 Plug 'm2mdas/phpcomplete-extended'
 " Plug 'maralla/completor.vim'
+"
+Plug 'joshdick/onedark.vim'
+Plug 'Yggdroot/duoduo'
+Plug 'Alvarocz/vim-northpole'
+Plug 'ajmwagar/vim-deus'
+Plug 'kudabux/vim-srcery-drk'
+Plug 'jakwings/vim-colors'
 
 call plug#end()
 " /plug
 
-colorscheme onedark
+" colorscheme onedark
+" colorscheme duoduo
+" colorscheme northpole
+" colorscheme deus
+colorscheme moody
+
 
 " airline
 set laststatus=2

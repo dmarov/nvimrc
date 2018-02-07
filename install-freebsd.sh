@@ -26,10 +26,12 @@ sudo pip install neovim-remote
 sudo gem install neovim
 
 # create folders
+mkdir -p ~/.config/nvim/autoload
+mkdir -p ~/.config/nvim/plugged
 mkdir -p ~/.config/nvim/colors
 
 # install plug
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+curl -fLo ~/.config/nvim/autoload/plug.vim \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # install config
