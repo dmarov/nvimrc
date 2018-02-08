@@ -212,8 +212,8 @@ let g:ctrlsf_winsize = '100%'
 
 " custom mappings
 
-:nmap <buffer> echo a<?= $; ?><Esc>2ba
-:nmap <buffer> code a<?php  ?><Esc>1bhi
+:nmap echo a<?= $; ?><Esc>2ba
+:nmap code a<?php  ?><Esc>1bhi
 " autocmd FileType phptemplate nmap <buffer> echo a<?= $; ?><Esc>2ba
 :nmap <Tab> <C-w>w
 
