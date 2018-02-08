@@ -81,7 +81,7 @@ Plug 'jakwings/vim-colors'
 call plug#end()
 " /plug
 
-colorscheme moody
+colorscheme onedark
 
 " airline
 set laststatus=2
