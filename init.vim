@@ -78,12 +78,15 @@ Plug 'ajmwagar/vim-deus'
 Plug 'kudabux/vim-srcery-drk'
 Plug 'jakwings/vim-colors'
 Plug 'dracula/vim'
+Plug 'preocanin/greenwint'
+Plug 'vim-scripts/greenvision'
 
 call plug#end()
 " /plug
 
 " colorscheme onedark
-colorscheme dracula
+" colorscheme greenwint
+colorscheme greenvision
 
 " airline
 set laststatus=2
