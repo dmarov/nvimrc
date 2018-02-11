@@ -77,11 +77,13 @@ Plug 'Alvarocz/vim-northpole'
 Plug 'ajmwagar/vim-deus'
 Plug 'kudabux/vim-srcery-drk'
 Plug 'jakwings/vim-colors'
+Plug 'dracula/vim'
 
 call plug#end()
 " /plug
 
-colorscheme onedark
+" colorscheme onedark
+colorscheme dracula
 
 " airline
 set laststatus=2
