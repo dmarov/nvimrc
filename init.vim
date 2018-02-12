@@ -84,10 +84,11 @@ Plug 'vim-scripts/greenvision'
 call plug#end()
 " /plug
 
-" colorscheme onedark
+colorscheme onedark
 " colorscheme greenwint
 " colorscheme greenvision
-colorscheme moody
+" colorscheme moody
+" colorscheme deus
 
 " airline
 set laststatus=2
@@ -233,3 +234,4 @@ endfor
 " /custom mappings
 
 " autocmd FileType tpl phptemplate
+let g:phpcomplete_index_composer_command = 'composer'
