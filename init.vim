@@ -86,7 +86,8 @@ call plug#end()
 
 " colorscheme onedark
 " colorscheme greenwint
-colorscheme greenvision
+" colorscheme greenvision
+colorscheme moody
 
 " airline
 set laststatus=2
