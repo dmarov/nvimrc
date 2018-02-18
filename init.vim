@@ -84,12 +84,12 @@ Plug 'jakwings/vim-colors'
 call plug#end()
 " /plug
 
-" colorscheme onedark
-" colorscheme greenwint
-" colorscheme relaxedgreen
 colorscheme moody
-
+" colorscheme greenvision
+" colorscheme moody
+" colorscheme deus
 " airline
+
 set laststatus=2
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
@@ -233,3 +233,4 @@ endfor
 " /custom mappings
 
 " autocmd FileType tpl phptemplate
+let g:phpcomplete_index_composer_command = 'composer'
