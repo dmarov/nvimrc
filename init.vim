@@ -68,25 +68,26 @@ Plug 'janko-m/vim-test'
 
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'gmake'}
-Plug 'm2mdas/phpcomplete-extended'
+" Plug 'm2mdas/phpcomplete-extended'
 " Plug 'maralla/completor.vim'
-"
+Plug 'Shougo/deoplete.nvim', { 'tag': '4.0-serial', 'do': ':UpdateRemotePlugins' }
+
 Plug 'joshdick/onedark.vim'
 Plug 'Yggdroot/duoduo'
 Plug 'Alvarocz/vim-northpole'
 Plug 'ajmwagar/vim-deus'
-Plug 'kudabux/vim-srcery-drk'
-Plug 'jakwings/vim-colors'
 Plug 'dracula/vim'
 Plug 'preocanin/greenwint'
 Plug 'vim-scripts/greenvision'
+Plug 'jakwings/vim-colors'
 
 call plug#end()
 " /plug
 
 " colorscheme onedark
 " colorscheme greenwint
-colorscheme greenvision
+" colorscheme relaxedgreen
+colorscheme moody
 
 " airline
 set laststatus=2
