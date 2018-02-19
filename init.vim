@@ -84,7 +84,7 @@ Plug 'jakwings/vim-colors'
 call plug#end()
 " /plug
 
-colorscheme moody
+colorscheme onedark
 " colorscheme greenvision
 " colorscheme moody
 " colorscheme deus
