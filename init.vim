@@ -32,42 +32,42 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tpope/vim-fugitive'
-Plug 'ervandew/supertab'
-Plug 'majutsushi/tagbar'
+"Plug 'tpope/vim-fugitive'
+"Plug 'ervandew/supertab'
+"Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'scrooloose/nerdcommenter'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'matze/vim-move'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'MattesGroeger/vim-bookmarks'
-Plug 'Raimondi/delimitMate'
-Plug 'wting/rust.vim'
-Plug 'equalsraf/neovim-gui-shim'
-Plug 'Ioannis-Kapoulas/vim-autoprefixer'
-Plug 'sheerun/vim-polyglot'
-Plug 'eugen0329/vim-esearch'
-Plug 'neomake/neomake'
-Plug 'easymotion/vim-easymotion'
-Plug 'gregsexton/matchtag'
+"Plug 'matze/vim-move'
+"Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-commentary'
+"Plug 'MattesGroeger/vim-bookmarks'
+"Plug 'Raimondi/delimitMate'
+"Plug 'wting/rust.vim'
+"Plug 'equalsraf/neovim-gui-shim'
+"Plug 'Ioannis-Kapoulas/vim-autoprefixer'
+"Plug 'sheerun/vim-polyglot'
+"Plug 'eugen0329/vim-esearch'
+"Plug 'neomake/neomake'
+"Plug 'easymotion/vim-easymotion'
+"Plug 'gregsexton/matchtag'
 Plug 'dyng/ctrlsf.vim'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'mhinz/vim-signify'
-Plug 'Yggdroot/indentLine'
-Plug 'KabbAmine/gulp-vim'
-Plug 'godlygeek/tabular'
-Plug 'Shougo/echodoc.vim'
-Plug 'Shougo/denite.nvim'
-Plug 'jsfaint/gen_tags.vim'
-Plug 'Rican7/php-doc-modded'
-Plug 'janko-m/vim-test'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
+"Plug 'mhinz/vim-signify'
+"Plug 'Yggdroot/indentLine'
+"Plug 'KabbAmine/gulp-vim'
+"Plug 'godlygeek/tabular'
+"Plug 'Shougo/echodoc.vim'
+"Plug 'Shougo/denite.nvim'
+"Plug 'jsfaint/gen_tags.vim'
+"Plug 'Rican7/php-doc-modded'
+"Plug 'janko-m/vim-test'
 
-Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimproc.vim', {'do' : 'gmake'}
+"Plug 'Shougo/unite.vim'
+"Plug 'Shougo/vimproc.vim', {'do' : 'gmake'}
 " Plug 'm2mdas/phpcomplete-extended'
 " Plug 'maralla/completor.vim'
 Plug 'Shougo/deoplete.nvim', { 'tag': '4.0-serial', 'do': ':UpdateRemotePlugins' }
@@ -77,18 +77,22 @@ Plug 'Yggdroot/duoduo'
 Plug 'Alvarocz/vim-northpole'
 Plug 'ajmwagar/vim-deus'
 Plug 'dracula/vim'
-Plug 'preocanin/greenwint'
-Plug 'vim-scripts/greenvision'
-Plug 'jakwings/vim-colors'
+"Plug 'preocanin/greenwint'
+"Plug 'vim-scripts/greenvision'
+"Plug 'jakwings/vim-colors'
 
 call plug#end()
 " /plug
 
 colorscheme onedark
 " colorscheme greenvision
-" colorscheme moody
+"colorscheme moody
 " colorscheme deus
 " airline
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
 
 set laststatus=2
 let g:airline_left_sep = ''
@@ -141,19 +145,19 @@ let g:move_key_modifier = 'C'
 
 
 " neomake
-autocmd! BufWritePost * Neomake
-let g:neomake_html_enabled_makers = []
-let g:neomake_rust_enabled_makers = []
+"autocmd! BufWritePost * Neomake
+"let g:neomake_html_enabled_makers = []
+"let g:neomake_rust_enabled_makers = []
 " /neomake
 
 " deoplete
-" let g:deoplete#enable_at_startup = 1
-" function Multiple_cursors_before()
-"     let g:deoplete#disable_auto_complete = 1
-" endfunction
-" function Multiple_cursors_after()
-"     let g:deoplete#disable_auto_complete = 0
-" endfunction
+let g:deoplete#enable_at_startup = 1
+function Multiple_cursors_before()
+    let g:deoplete#disable_auto_complete = 1
+endfunction
+function Multiple_cursors_after()
+    let g:deoplete#disable_auto_complete = 0
+endfunction
 " /deoplete
 
 " settings for tpl files
@@ -163,9 +167,9 @@ au BufRead * retab
 " /settings for tpl files
 
 " ultisnips
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<c-b>"
+"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " /ultisnips
 
 " indentLine
@@ -177,35 +181,35 @@ let g:indentLine_color_dark = 1 " (default: 2)
 " /indentLine
 
 " LSP
-let g:LanguageClient_autoStart = 1
+"let g:LanguageClient_autoStart = 1
 
-let g:LanguageClient_serverCommands = {
-\ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-\ }
+"let g:LanguageClient_serverCommands = {
+"\ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+"\ }
 
-nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> GD :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+"nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+"nnoremap <silent> GD :call LanguageClient_textDocument_definition()<CR>
+"nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 " /LSP
 
 " gen_tags
-let g:gen_tags#ctags_bin = 'exctags'
-let g:gen_tags#ctags_auto_gen = 0
-let g:gen_tags#gtags_auto_gen = 0
+"let g:gen_tags#ctags_bin = 'exctags'
+"let g:gen_tags#ctags_auto_gen = 0
+"let g:gen_tags#gtags_auto_gen = 0
 " /gen_tags
 
 " /php-doc-modded
-inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <C-P> :call PhpDocSingle()<CR> 
-vnoremap <C-P> :call PhpDocRange()<CR> 
+"inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
+"nnoremap <C-P> :call PhpDocSingle()<CR> 
+"vnoremap <C-P> :call PhpDocRange()<CR> 
 " /php-doc-modded
 
 " vim-test
-nmap <silent> <leader>t :TestNearest<CR>
-nmap <silent> <leader>T :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>g :TestVisit<CR>
+"nmap <silent> <leader>t :TestNearest<CR>
+"nmap <silent> <leader>T :TestFile<CR>
+"nmap <silent> <leader>a :TestSuite<CR>
+"nmap <silent> <leader>l :TestLast<CR>
+"nmap <silent> <leader>g :TestVisit<CR>
 " /vim-test
 
 " ctrlsf
@@ -233,4 +237,4 @@ endfor
 " /custom mappings
 
 " autocmd FileType tpl phptemplate
-let g:phpcomplete_index_composer_command = 'composer'
+"let g:phpcomplete_index_composer_command = 'composer'
