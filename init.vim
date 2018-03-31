@@ -32,23 +32,23 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'mattn/emmet-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'tpope/vim-fugitive'
-"Plug 'ervandew/supertab'
+"Plug 'tpope/vim-fugitive' #for git
+Plug 'ervandew/supertab' " completion on tab
 "Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
-"Plug 'scrooloose/nerdcommenter'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'scrooloose/nerdcommenter'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'terryma/vim-multiple-cursors'
 "Plug 'matze/vim-move'
-"Plug 'tpope/vim-surround'
-"Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-surround' " to modify brackets
+Plug 'tpope/vim-commentary' " gcc comment
 "Plug 'MattesGroeger/vim-bookmarks'
-"Plug 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate' " auto brackets, quotes
 "Plug 'wting/rust.vim'
 "Plug 'equalsraf/neovim-gui-shim'
 "Plug 'Ioannis-Kapoulas/vim-autoprefixer'
-"Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot' " language packs
 "Plug 'eugen0329/vim-esearch'
 "Plug 'neomake/neomake'
 "Plug 'easymotion/vim-easymotion'
