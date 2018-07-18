@@ -99,7 +99,7 @@ let g:airline_theme='raven'
 
 " emmet
 let g:user_emmet_install_global = 0
-autocmd FileType html,tpl,css,scss EmmetInstall
+autocmd FileType html,tpl,css,scss,vue EmmetInstall
 " /emmet
 
 " nerdtree
@@ -147,13 +147,13 @@ let g:neomake_rust_enabled_makers = []
 " /neomake
 
 " deoplete
-" let g:deoplete#enable_at_startup = 1
-" function Multiple_cursors_before()
-"     let g:deoplete#disable_auto_complete = 1
-" endfunction
-" function Multiple_cursors_after()
-"     let g:deoplete#disable_auto_complete = 0
-" endfunction
+let g:deoplete#enable_at_startup = 1
+function Multiple_cursors_before()
+    let g:deoplete#disable_auto_complete = 1
+endfunction
+function Multiple_cursors_after()
+    let g:deoplete#disable_auto_complete = 0
+endfunction
 " /deoplete
 
 " settings for tpl files
@@ -231,6 +231,3 @@ endfor
 
 :nmap <Space> :NERDTreeTabsToggle<CR>
 " /custom mappings
-
-" autocmd FileType tpl phptemplate
-let g:phpcomplete_index_composer_command = 'composer'
