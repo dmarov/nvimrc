@@ -68,27 +68,22 @@ Plug 'janko-m/vim-test'
 
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'gmake'}
-" Plug 'm2mdas/phpcomplete-extended'
-" Plug 'maralla/completor.vim'
-Plug 'Shougo/deoplete.nvim', { 'tag': '4.0-serial', 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/deoplete.nvim', { 'tag': '4.0-serial', 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/deoplete.nvim'
 
 Plug 'joshdick/onedark.vim'
 Plug 'Yggdroot/duoduo'
 Plug 'Alvarocz/vim-northpole'
 Plug 'ajmwagar/vim-deus'
 Plug 'dracula/vim'
-Plug 'preocanin/greenwint'
-Plug 'vim-scripts/greenvision'
-Plug 'jakwings/vim-colors'
+"Plug 'preocanin/greenwint'
+"Plug 'vim-scripts/greenvision'
+"Plug 'jakwings/vim-colors'
 
 call plug#end()
 " /plug
 
 colorscheme onedark
-" colorscheme greenvision
-" colorscheme moody
-" colorscheme deus
-" airline
 
 set laststatus=2
 let g:airline_left_sep = ''
@@ -194,12 +189,6 @@ let g:gen_tags#ctags_auto_gen = 0
 let g:gen_tags#gtags_auto_gen = 0
 " /gen_tags
 
-" /php-doc-modded
-inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <C-P> :call PhpDocSingle()<CR> 
-vnoremap <C-P> :call PhpDocRange()<CR> 
-" /php-doc-modded
-
 " vim-test
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
@@ -217,7 +206,6 @@ let g:ctrlsf_winsize = '100%'
 " /ctrlsf
 
 " custom mappings
-
 :nmap echo a<?= $; ?><Esc>2ba
 :nmap code a<?php  ?><Esc>1bhi
 " autocmd FileType phptemplate nmap <buffer> echo a<?= $; ?><Esc>2ba
@@ -230,4 +218,7 @@ endfor
 :nmap <A-9> :tablast<CR>
 
 :nmap <Space> :NERDTreeTabsToggle<CR>
+
+:nmap <C-h> gT
+:nmap <C-l> gt
 " /custom mappings
