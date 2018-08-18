@@ -1,6 +1,7 @@
 #!/bin/sh 
 
-# requirements
+if [ $(uname) == 'FreeBSD' ];
+then
 sudo pkg install -y \
     curl \
     git \
@@ -44,3 +45,4 @@ nvim -c PlugUpgrade -c PlugInstall -c PlugUpdate -c q -c q
 nvim -c UpdateRemotePlugins -c q -c q
 
 echo done!
+fi;
