@@ -222,3 +222,5 @@ endfor
 :nmap <C-h> gT
 :nmap <C-l> gt
 " /custom mappings
+
+autocmd FileType raml setlocal commentstring=#\ %s
