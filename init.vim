@@ -69,7 +69,7 @@ Plug 'janko-m/vim-test'
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'gmake'}
 "Plug 'Shougo/deoplete.nvim', { 'tag': '4.0-serial', 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 Plug 'joshdick/onedark.vim'
 Plug 'Yggdroot/duoduo'
@@ -154,6 +154,7 @@ endfunction
 " settings for tpl files
 au BufReadPost *.tpl set ft=html
 au BufReadPost *.tpl set syntax=php
+au BufReadPost *.raml set syntax=yaml
 au BufRead * retab
 " /settings for tpl files
 
@@ -206,9 +207,9 @@ let g:ctrlsf_winsize = '100%'
 " /ctrlsf
 
 " custom mappings
-:nmap echo a<?= $; ?><Esc>2ba
-:nmap code a<?php  ?><Esc>1bhi
-" autocmd FileType phptemplate nmap <buffer> echo a<?= $; ?><Esc>2ba
+au BufReadPost *.tpl nmap echo a<?= $; ?><Esc>2ba
+au BufReadPost *.tpl nmap code a<?php  ?><Esc>1bhi
+
 :nmap <Tab> <C-w>w
 
 for i in range(1, 8)
