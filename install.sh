@@ -10,18 +10,20 @@ sudo pkg install -y \
     xclip \
     neovim \
     coreutils \
-    python3 \
-    py35-setuptools \
+    python36 \
     libexo \
     liberation-fonts-ttf \
     global \
     ctags \
+    global \
     rubygem-gems \
     the_silver_searcher \
-    php56-iconv
+    py27-pip \
+    py36-pip \
 
 sudo yarn global add postcss-cli autoprefixer
 sudo easy_install-3.5 pip
+sudo pip2 install pynvim
 sudo pip install neovim
 sudo pip install neovim-remote
 sudo gem install neovim
