@@ -68,7 +68,6 @@ Plug 'janko-m/vim-test'
 
 Plug 'Shougo/unite.vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'gmake'}
-"Plug 'Shougo/deoplete.nvim', { 'tag': '4.0-serial', 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 Plug 'joshdick/onedark.vim'
@@ -76,9 +75,6 @@ Plug 'Yggdroot/duoduo'
 Plug 'Alvarocz/vim-northpole'
 Plug 'ajmwagar/vim-deus'
 Plug 'dracula/vim'
-"Plug 'preocanin/greenwint'
-"Plug 'vim-scripts/greenvision'
-"Plug 'jakwings/vim-colors'
 
 call plug#end()
 " /plug

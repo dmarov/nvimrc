@@ -5,28 +5,31 @@ then
 sudo pkg install -y \
     curl \
     git \
-    npm \
+    python36 \
+    python27 \
+    yarn \
     node \
     xclip \
     neovim \
-    coreutils \
-    python36 \
-    libexo \
-    liberation-fonts-ttf \
-    global \
-    ctags \
     global \
     rubygem-gems \
-    the_silver_searcher \
     py27-pip \
     py36-pip \
+    #    npm \
+    #    ctags \
+        #    the_silver_searcher \
+        #    coreutils \
+        #    libexo \
+        #    liberation-fonts-ttf \
 
-sudo yarn global add postcss-cli autoprefixer
-sudo easy_install-3.5 pip
-sudo pip2 install pynvim
-sudo pip install neovim
-sudo pip install neovim-remote
+#sudo yarn global add postcss-cli autoprefixer
+#sudo easy_install-3.5 pip
+#sudo pip2 install pynvim
+sudo pip-3.6 install neovim
+sudo pip-2.7 install neovim
+yarn global add neovim
 sudo gem install neovim
+#sudo pip install neovim-remote
 
 # create folders
 mkdir -p ~/.config/nvim/autoload
