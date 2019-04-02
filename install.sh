@@ -15,6 +15,8 @@ sudo pkg install -y \
     rubygem-gems \
     py27-pip \
     py36-pip \
+    ctags \
+    python3 \
     #    npm \
     #    ctags \
         #    the_silver_searcher \
