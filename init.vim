@@ -57,7 +57,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mhinz/vim-signify'
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 Plug 'KabbAmine/gulp-vim'
 Plug 'godlygeek/tabular'
 Plug 'Shougo/echodoc.vim'
@@ -75,6 +75,8 @@ Plug 'Yggdroot/duoduo'
 Plug 'Alvarocz/vim-northpole'
 Plug 'ajmwagar/vim-deus'
 Plug 'dracula/vim'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 call plug#end()
 " /plug
@@ -221,3 +223,5 @@ endfor
 " /custom mappings
 
 autocmd FileType raml setlocal commentstring=#\ %s
+
+let g:mkdp_auto_start = 1
