@@ -223,5 +223,3 @@ endfor
 " /custom mappings
 
 autocmd FileType raml setlocal commentstring=#\ %s
-
-let g:mkdp_auto_start = 1
