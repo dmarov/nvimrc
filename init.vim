@@ -24,8 +24,12 @@ set tabstop=4
 set shiftwidth=4
 set smarttab
 set expandtab
+set backupcopy=yes
+set nowritebackup
 set smartindent
 set scrolloff=10
+
+"set nowritebackup
 
 " plug
 call plug#begin('~/.config/nvim/plugged')
@@ -199,7 +203,7 @@ nmap <silent> <leader>g :TestVisit<CR>
 " ctrlsf
 let g:ctrlsf_default_view_mode = 'compact'
 let g:ctrlsf_position = 'bottom'
-let g:ctrlsf_regex_pattern = 1
+"let g:ctrlsf_regex_pattern = 1
 let g:ctrlsf_selected_line_hl = 'op'
 let g:ctrlsf_winsize = '100%'
 " /ctrlsf
