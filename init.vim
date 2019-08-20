@@ -34,7 +34,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'ervandew/supertab'
-Plug 'majutsushi/tagbar'
+"Plug 'majutsushi/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -45,7 +45,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'MattesGroeger/vim-bookmarks'
 Plug 'Raimondi/delimitMate'
-Plug 'wting/rust.vim'
+"Plug 'wting/rust.vim'
 Plug 'equalsraf/neovim-gui-shim'
 Plug 'Ioannis-Kapoulas/vim-autoprefixer'
 Plug 'sheerun/vim-polyglot'
@@ -57,7 +57,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'mhinz/vim-signify'
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 Plug 'KabbAmine/gulp-vim'
 Plug 'godlygeek/tabular'
 Plug 'Shougo/echodoc.vim'
@@ -76,6 +76,7 @@ Plug 'Alvarocz/vim-northpole'
 Plug 'ajmwagar/vim-deus'
 Plug 'dracula/vim'
 
+Plug 'rust-lang/rust.vim'
 call plug#end()
 " /plug
 
@@ -90,7 +91,7 @@ let g:airline_theme='raven'
 
 " emmet
 let g:user_emmet_install_global = 0
-autocmd FileType html,tpl,css,scss,vue EmmetInstall
+autocmd FileType html,tpl,css,scss EmmetInstall
 " /emmet
 
 " nerdtree
@@ -169,15 +170,15 @@ let g:indentLine_color_dark = 1 " (default: 2)
 " /indentLine
 
 " LSP
-let g:LanguageClient_autoStart = 1
+"let g:LanguageClient_autoStart = 1
 
-let g:LanguageClient_serverCommands = {
-\ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-\ }
+"let g:LanguageClient_serverCommands = {
+""\ 'rust': ['rustup', 'run', 'nightly', 'rls'],
+""\ }
 
-nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> GD :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+"nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+"nnoremap <silent> GD :call LanguageClient_textDocument_definition()<CR>
+"nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
 " /LSP
 
 " gen_tags
@@ -216,8 +217,6 @@ endfor
 
 :nmap <Space> :NERDTreeTabsToggle<CR>
 
-:nmap <C-h> gT
-:nmap <C-l> gt
+:nmap <A-h> gT
+:nmap <A-l> gt
 " /custom mappings
-
-autocmd FileType raml setlocal commentstring=#\ %s
