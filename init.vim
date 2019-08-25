@@ -152,12 +152,9 @@ function Multiple_cursors_after()
 endfunction
 " /deoplete
 
-" settings for tpl files
 au BufReadPost *.tpl set ft=html
 au BufReadPost *.tpl set syntax=php
-au BufReadPost *.raml set syntax=yaml
 au BufRead * retab
-" /settings for tpl files
 
 " ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -191,21 +188,22 @@ let g:gen_tags#ctags_auto_gen = 0
 let g:gen_tags#gtags_auto_gen = 0
 " /gen_tags
 
-" vim-test
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
-" /vim-test
 
-" ctrlsf
+let test#strategy = {
+  \ 'nearest': 'neovim',
+  \ 'file':    'neovim',
+  \}
+
 let g:ctrlsf_default_view_mode = 'compact'
 let g:ctrlsf_position = 'bottom'
-"let g:ctrlsf_regex_pattern = 1
+let g:ctrlsf_regex_pattern = 1
 let g:ctrlsf_selected_line_hl = 'op'
 let g:ctrlsf_winsize = '100%'
-" /ctrlsf
 
 " custom mappings
 au BufReadPost *.tpl nmap echo a<?= $; ?><Esc>2ba
