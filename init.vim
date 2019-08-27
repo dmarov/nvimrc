@@ -25,7 +25,7 @@ set shiftwidth=4
 set smarttab
 set expandtab
 set backupcopy=yes
-set nowritebackup
+"set nowritebackup
 set smartindent
 set scrolloff=10
 
