@@ -147,6 +147,7 @@ let g:ctrlsf_winsize = '100%'
 " LanguageClient
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'php': ['/usr/bin/php', '$HOME/.composer/vendor/felixfbecker/language-server/bin/php-language-server.php']
     \ }
 " /LanguageClient
 "
