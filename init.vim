@@ -154,4 +154,9 @@ let g:LanguageClient_serverCommands = {
 nmap <Tab> <C-w>w
 nmap <Space> :NERDTreeTabsToggle<CR>
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 "" /custom mappings
+
+autocmd BufWritePre *.rs :call LanguageClient#textDocument_formatting()
