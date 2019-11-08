@@ -29,6 +29,7 @@ set nowritebackup
 set smartindent
 set scrolloff=10
 set updatetime=100
+set completeopt=menu
 
 " plug
 call plug#begin('~/.config/nvim/plugged')
