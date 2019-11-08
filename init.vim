@@ -79,8 +79,12 @@ Plug 'Yggdroot/duoduo'
 Plug 'Alvarocz/vim-northpole'
 Plug 'ajmwagar/vim-deus'
 Plug 'dracula/vim'
-Plug 'rust-lang/rust.vim'
+"Plug 'rust-lang/rust.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 call plug#end()
 " /plug
 
@@ -205,20 +209,12 @@ let g:ctrlsf_regex_pattern = 1
 let g:ctrlsf_selected_line_hl = 'op'
 let g:ctrlsf_winsize = '100%'
 
-" custom mappings
-au BufReadPost *.tpl nmap echo a<?= $; ?><Esc>2ba
-au BufReadPost *.tpl nmap code a<?php  ?><Esc>1bhi
+" /custom mappings
+nmap <Tab> <C-w>w
 
-:nmap <Tab> <C-w>w
+nmap <Space> :NERDTreeTabsToggle<CR>
 
-for i in range(1, 8)
-    execute "nmap \<A-".i."> ".i."gt"
-endfor
-
-:nmap <A-9> :tablast<CR>
-
-:nmap <Space> :NERDTreeTabsToggle<CR>
-
-:nmap <A-h> gT
-:nmap <A-l> gt
+nmap <A-h> gT
+nmap <A-l> gt
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 " /custom mappings
