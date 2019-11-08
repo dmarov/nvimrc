@@ -59,6 +59,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
+Plug 'cespare/vim-toml'
 call plug#end()
 " /plug
 
