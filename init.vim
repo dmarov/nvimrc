@@ -61,6 +61,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 Plug 'cespare/vim-toml'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 " /plug
 
