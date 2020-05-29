@@ -77,7 +77,7 @@ let g:airline_theme='raven'
 "
 " emmet
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,scss EmmetInstall
+autocmd FileType cshtml,html,css,scss EmmetInstall
 " /emmet
 "
 " nerdtree
