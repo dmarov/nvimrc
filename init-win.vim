@@ -9,6 +9,9 @@ set imsearch=0
 set autoread
 set updatetime=250
 set noswapfile
+set nobackup
+set undofile
+set undodir=~/.config/nvim/backups
 set number
 set relativenumber
 set nowrap
@@ -30,6 +33,7 @@ set smartindent
 set scrolloff=10
 set updatetime=100
 set completeopt=menu
+set incsearch
 
 " plug
 call plug#begin('~/AppData/Local/nvim/plugged')
@@ -56,13 +60,14 @@ Plug 'jsfaint/gen_tags.vim'
 Plug 'janko-m/vim-test'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'joshdick/onedark.vim'
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+" Plug 'autozimu/LanguageClient-neovim', {
+"     \ 'branch': 'next',
+"     \ 'do': 'bash install.sh',
+"     \ }
 Plug 'cespare/vim-toml'
 Plug 'sheerun/vim-polyglot'
 Plug 'SirVer/ultisnips'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 " /plug
 
@@ -149,10 +154,10 @@ let g:ctrlsf_winsize = '100%'
 " ctrlsf
 
 " LanguageClient
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'php': ['/usr/bin/php', '$HOME/.composer/vendor/felixfbecker/language-server/bin/php-language-server.php']
-    \ }
+" let g:LanguageClient_serverCommands = {
+"     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+"     \ 'php': ['/usr/bin/php', '$HOME/.composer/vendor/felixfbecker/language-server/bin/php-language-server.php']
+"     \ }
 " /LanguageClient
 "
 " /custom mappings
