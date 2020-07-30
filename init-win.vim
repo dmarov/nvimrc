@@ -60,14 +60,17 @@ Plug 'jsfaint/gen_tags.vim'
 Plug 'janko-m/vim-test'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'joshdick/onedark.vim'
-" Plug 'autozimu/LanguageClient-neovim', {
-"     \ 'branch': 'next',
-"     \ 'do': 'bash install.sh',
-"     \ }
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'tag': 'binary-*-i686-pc-windows-gnu',
+    \ 'do': 'install.ps1'
+    \ }
 Plug 'cespare/vim-toml'
 Plug 'sheerun/vim-polyglot'
 Plug 'SirVer/ultisnips'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'mbbill/undotree'
 call plug#end()
 " /plug
 
@@ -153,20 +156,23 @@ let g:ctrlsf_selected_line_hl = 'op'
 let g:ctrlsf_winsize = '100%'
 " ctrlsf
 
-" LanguageClient
-" let g:LanguageClient_serverCommands = {
-"     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-"     \ 'php': ['/usr/bin/php', '$HOME/.composer/vendor/felixfbecker/language-server/bin/php-language-server.php']
-"     \ }
 " /LanguageClient
+let g:LanguageClient_serverCommands = {
+    \ 'cpp': ['clangd'],
+    \ 'javascript': ['javascript-typescript-stdio'],
+    \ 'typescript': ['javascript-typescript-stdio']
+    \ }
+
+nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+" Or map each action separately
+nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+" "/LanguageClient
 "
 " /custom mappings
 nmap <Tab> <C-w>w
 nmap <Space> :NERDTreeTabsToggle<CR>
-nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
 "" /custom mappings
 
 autocmd BufWritePre *.rs :call LanguageClient#textDocument_formatting()
