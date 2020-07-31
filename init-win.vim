@@ -159,8 +159,8 @@ let g:ctrlsf_winsize = '100%'
 " /LanguageClient
 let g:LanguageClient_serverCommands = {
     \ 'cpp': ['clangd'],
-    \ 'javascript': ['javascript-typescript-stdio'],
-    \ 'typescript': ['javascript-typescript-stdio']
+    \ 'javascript': ['C:\Program Files\nodejs\typescript-language-server.cmd', '--stdio'],
+    \ 'typescript': ['C:\Program Files\nodejs\typescript-language-server.cmd', '--stdio'],
     \ }
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
