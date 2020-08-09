@@ -164,8 +164,8 @@ let g:ctrlsf_winsize = '100%'
 
 let g:LanguageClient_serverCommands = {
     \ 'cpp': ['clangd'],
-    \ 'javascript': ['typescript-language-server', '--stdio'],
-    \ 'typescript': ['typescript-language-server', '--stdio'],
+    \ 'javascript': ['C:\Program Files\nodejs\typescript-language-server.cmd', '--stdio'],
+    \ 'typescript': ['C:\Program Files\nodejs\typescript-language-server.cmd', '--stdio'],
     \ }
 
 
