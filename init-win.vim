@@ -1,4 +1,5 @@
 syntax on
+set encoding=utf-8
 set termguicolors
 set hidden
 let g:rehash256 = 1
@@ -22,6 +23,7 @@ set fillchars+=vert:\
 set list
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 set exrc
+set secure
 
 set tabstop=4
 set shiftwidth=4
@@ -58,8 +60,10 @@ Plug 'mhinz/vim-signify'
 Plug 'godlygeek/tabular'
 Plug 'jsfaint/gen_tags.vim'
 Plug 'janko-m/vim-test'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'ycm-core/YouCompleteMe'
 Plug 'joshdick/onedark.vim'
+" important!!! to enable running powershell scripts in system settings
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'tag': 'binary-*-i686-pc-windows-gnu',
@@ -69,8 +73,10 @@ Plug 'cespare/vim-toml'
 Plug 'sheerun/vim-polyglot'
 Plug 'SirVer/ultisnips'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'leafgarland/typescript-vim'
 Plug 'mbbill/undotree'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+
 call plug#end()
 " /plug
 
@@ -156,12 +162,12 @@ let g:ctrlsf_selected_line_hl = 'op'
 let g:ctrlsf_winsize = '100%'
 " ctrlsf
 
-" /LanguageClient
 let g:LanguageClient_serverCommands = {
     \ 'cpp': ['clangd'],
-    \ 'javascript': ['C:\Program Files\nodejs\typescript-language-server.cmd', '--stdio'],
-    \ 'typescript': ['C:\Program Files\nodejs\typescript-language-server.cmd', '--stdio'],
+    \ 'javascript': ['typescript-language-server', '--stdio'],
+    \ 'typescript': ['typescript-language-server', '--stdio'],
     \ }
+
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
 " Or map each action separately
