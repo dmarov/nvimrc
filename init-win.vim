@@ -76,11 +76,11 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'mbbill/undotree'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
-
+Plug 'https://github.com/dmarov/minimalist'
 call plug#end()
 " /plug
 
-colorscheme onedark
+colorscheme minimalist
 
 " airline
 set laststatus=2
