@@ -58,9 +58,7 @@ Plug 'gregsexton/matchtag'
 Plug 'dyng/ctrlsf.vim'
 Plug 'mhinz/vim-signify'
 Plug 'godlygeek/tabular'
-Plug 'jsfaint/gen_tags.vim'
 Plug 'janko-m/vim-test'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ycm-core/YouCompleteMe'
 Plug 'joshdick/onedark.vim'
 " important!!! to enable running powershell scripts in system settings
@@ -77,10 +75,11 @@ Plug 'mbbill/undotree'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'https://github.com/dmarov/minimalist'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 " /plug
 
-colorscheme minimalist
+colorscheme onedark
 
 " airline
 set laststatus=2
@@ -96,7 +95,7 @@ autocmd FileType cshtml,html,css,scss EmmetInstall
 " /emmet
 "
 " nerdtree
-let NERDTreeWinSize = 25
+let NERDTreeWinSize = 30
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
