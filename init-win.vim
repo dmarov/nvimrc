@@ -112,7 +112,7 @@ let g:nerdtree_tabs_synchronize_view = 0
 " /nerdtree-tabs
 "
 " nerdtree-git-plugin
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
@@ -163,12 +163,13 @@ let g:ctrlsf_winsize = '100%'
 
 let g:LanguageClient_serverCommands = {
     \ 'cpp': ['clangd'],
-    \ 'javascript': ['C:\Program Files\nodejs\typescript-language-server.cmd', '--stdio'],
-    \ 'typescript': ['C:\Program Files\nodejs\typescript-language-server.cmd', '--stdio'],
+    \ 'javascript': ['C:\Users\mds3d\AppData\Local\Yarn\bin\typescript-language-server.cmd', '--stdio'],
+    \ 'typescript': ['C:\Users\mds3d\AppData\Local\Yarn\bin\typescript-language-server.cmd', '--stdio'],
     \ }
 
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+nnoremap <F6> :call LanguageClient#explainErrorAtPoint()<CR>
 " Or map each action separately
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
