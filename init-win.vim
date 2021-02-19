@@ -48,7 +48,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'terryma/vim-multiple-cursors'
+"Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'matze/vim-move'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -131,15 +132,15 @@ let g:move_key_modifier = 'C'
 " /vim-move
 
 
-" deoplete
-let g:deoplete#enable_at_startup = 1
-function Multiple_cursors_before()
-    let g:deoplete#disable_auto_complete = 1
-endfunction
-function Multiple_cursors_after()
-    let g:deoplete#disable_auto_complete = 0
-endfunction
-" /deoplete
+" " deoplete
+" let g:deoplete#enable_at_startup = 1
+" function Multiple_cursors_before()
+"     let g:deoplete#disable_auto_complete = 1
+" endfunction
+" function Multiple_cursors_after()
+"     let g:deoplete#disable_auto_complete = 0
+" endfunction
+" " /deoplete
 
 " vim-test
 nmap <silent> <leader>t :TestNearest<CR>
