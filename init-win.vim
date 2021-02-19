@@ -76,6 +76,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'https://github.com/dmarov/minimalist'
 Plug 'joshdick/onedark.vim'
+Plug 'OmniSharp/omnisharp-vim'
 call plug#end()
 " /plug
 
